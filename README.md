@@ -14,7 +14,7 @@ JSON Remark provides a standard way to annotate JSON documents with additional d
 
 #### Linting errors
 
-Here we see remarks from a made-up linting tool. The tool provides a URL that identifies itself as `https://example.com/linting-tool`. It includes remarks with types that defining what can be found in `data`. This example has a linting remark with a level of `error` for a given path, which in this case is the property of a schema.
+Here we see remarks from a made-up linting tool. The tool provides a URL that identifies itself as `https://example.com/linting-tool`. The `type` defines what can be found in `data`. This example has a linting remark with a level of `error` for a given path, which in this case is the property of a schema.
 
 ```json
 {
@@ -36,9 +36,9 @@ Here we see remarks from a made-up linting tool. The tool provides a URL that id
 
 #### Comments
 
-This shows remarks from a tool that allows for commenting on an OpenAPI document. The remark includes a `comment` and information about the commentor. In this example, the person is commenting on an HTTP method in the OpenAPI document.
+This shows remarks from a tool that allows for commenting on an OpenAPI document. The remark includes a `comment` and information about the commentor. In this example, the person is commenting on an HTTP method in the OpenAPI document. The `type` defines what can be found in `data`.
 
-(note the slashes in the URL path are converted to `~1` according to the [JSON Pointer specification](https://www.rfc-editor.org/rfc/rfc6901).
+(note the slashes in the URL path are converted to `~1` according to the [JSON Pointer specification](https://www.rfc-editor.org/rfc/rfc6901))
 
 ```json
 {
