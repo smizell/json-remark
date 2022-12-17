@@ -44,6 +44,6 @@ Here we see an example that includes remarks from a made-up linting tool. The to
 #### Remark
 
 - `path` - a [JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901) to the item in the JSON document to which the remark pertains
-- `for` (enum: `key`, `value`, `all`) (default: `value`) - the specific part of the path to which the remark pertains. This may be the `key`, the `value` found at the path, or the full key-value.
+- `for` (optional) (enum: `key`, `value`, `all`) (default: `value`) - the specific part of the path to which the remark pertains. This may be the `key`, the `value` found at the path, or the full key-value.
 - `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This MUST act as an ID for the remark type and a MAY act as a resolvable URL that defines documentation about the type itself.
 - `data` (object) - an object that contains remark data as defined by the `type`
