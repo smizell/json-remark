@@ -16,6 +16,8 @@ This defines a JSON Remark Type to be used to comments to JSON documents. The `t
 
 ## Example
 
+This example shows a thread of comments for an OpenAPI document found at `http://example.com/openapi-docs/1234`. These comments were produced by a service at `https://example.com/commenting-tool`. There are two comments: the first is a parent comment and the second is a reply to that comment. Each comment has a URL as the `id`.
+
 ```json
 {
   "version": "2022-12-17-draft",
