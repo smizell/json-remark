@@ -80,3 +80,4 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 ## Contributed JSON Remark Types
 
 - [Linting](./contrib/linting.md)
+- [Commenting](./contrib/commenting.md)
