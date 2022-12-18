@@ -22,8 +22,8 @@ This defines a JSON Remark Type to be used to comments to JSON documents. The `t
   "origin": "https://example.com/commenting-tool",
   "remarks": [
     {
+      "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
       "path": "#/paths/~1customers~1{id}/put",
-      "type": "https://example.com/definition/comment",
       "text": "Should this be a PATCH instead of a PUT?",
       "data": {
         "id": "https://example.com/comments/1234",
@@ -32,8 +32,8 @@ This defines a JSON Remark Type to be used to comments to JSON documents. The `t
       }
     },
     {
+      "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
       "path": "#/paths/~1customers~1{id}/put",
-      "type": "https://example.com/definition/comment",
       "text": "Let's leave it as PUT.",
       "data": {
         "id": "https://example.com/comments/5678",
