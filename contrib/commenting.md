@@ -20,6 +20,7 @@ This defines a JSON Remark Type to be used to comments to JSON documents. The `t
 {
   "version": "2022-12-17-draft",
   "author": "https://example.com/commenting-tool",
+  "origin": "http://example.com/openapi-docs/1234",
   "remarks": [
     {
       "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
