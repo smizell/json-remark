@@ -76,3 +76,7 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 - `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This MUST act as an ID for the remark type and a MAY act as a resolvable URL that defines documentation about the type itself.
 - `text` - human-readable text for the remark
 - `data` (object) - an object that contains remark data as defined by the `type`
+
+## Contributed JSON Remark Types
+
+- [Linting](./contrib/linting.md)
