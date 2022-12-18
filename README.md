@@ -2,7 +2,7 @@
 
 **Version**: `2022-12-17-draft`
 
-This is currently a draft and may change considerably.
+This is currently a draft and may change considerably. Please do not use yet.
 
 ## Overview
 
@@ -12,7 +12,7 @@ JSON Remark provides a standard way to annotate JSON documents with additional d
 
 ### Examples
 
-#### Linting errors
+#### Linting error example
 
 Here we see remarks from a made-up linting tool. The tool provides an `origin` URL that identifies itself as `https://example.com/linting-tool`. The `type` defines what can be found in `data`. The `more` URL links back to the full linting report. The `data` is shows this is a linting remark with a level of `error` for a given path, which in this case is the property of a schema.
 
@@ -23,8 +23,8 @@ Here we see remarks from a made-up linting tool. The tool provides an `origin` U
   "more": "https://example.com/linting-report/33442",
   "remarks": [
     {
-      "path": "#/components/schemas/Person/properties/firstName",
       "type": "https://example.com/definition/linting",
+      "path": "#/components/schemas/Person/properties/firstName",
       "text": "Property name MUST be snake case",
       "data": {
         "level": "error",
@@ -36,7 +36,7 @@ Here we see remarks from a made-up linting tool. The tool provides an `origin` U
 }
 ```
 
-#### Comments
+#### Comment example
 
 This shows remarks from a tool that allows for commenting on an OpenAPI document. The remark includes the comment `text` and information about the commentor. In this example, the person is commenting on an HTTP method in the OpenAPI document. The `type` defines what can be found in `data`.
 
@@ -48,8 +48,8 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
   "origin": "https://example.com/commenting-tool",
   "remarks": [
     {
-      "path": "#/paths/~1customers~1{id}/put",
       "type": "https://example.com/definition/comment",
+      "path": "#/paths/~1customers~1{id}/put",
       "text": "Should this be a PATCH instead of a PUT?",
       "data": {
         "user_profile": "https://github.com/smizell",
@@ -71,11 +71,11 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 
 #### Remark
 
+- `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This must act as an ID for the remark type and may act as a resolvable URL that defines documentation about the type itself.
 - `path` - a [JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901) to the item in the JSON document to which the remark pertains
+- `text` (optional) - human-readable text for the remark
 - `for` (optional) (enum: `key`, `value`, `all`) (default: `key`) - the specific part of the path to which the remark pertains. This may be the `key`, the `value` found at the path, or the full key-value.
-- `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This MUST act as an ID for the remark type and a MAY act as a resolvable URL that defines documentation about the type itself.
-- `text` - human-readable text for the remark
-- `data` (object) - an object that contains remark data as defined by the `type`
+- `data` (object, optional) - an object that contains remark data as defined by the `type`
 
 ## Contributed JSON Remark Types
 
