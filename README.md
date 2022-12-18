@@ -14,12 +14,12 @@ JSON Remark provides a standard way to annotate JSON documents with additional d
 
 #### Linting error example
 
-Here we see remarks from a made-up linting tool. The tool provides an `origin` URL that identifies itself as `https://example.com/linting-tool`. The `type` defines what can be found in `data`. The `more` URL links back to the full linting report. The `data` is shows this is a linting remark with a level of `error` for a given path, which in this case is the property of a schema.
+Here we see remarks from a made-up linting tool. The tool provides an `author` URL that identifies itself as `https://example.com/linting-tool`. The `type` defines what can be found in `data`. The `more` URL links back to the full linting report. The `data` is shows this is a linting remark with a level of `error` for a given path, which in this case is the property of a schema.
 
 ```json
 {
   "version": "2022-12-17-draft",
-  "origin": "https://stoplight.io/open-source/spectral",
+  "author": "https://stoplight.io/open-source/spectral",
   "remarks": [
     {
       "path": "#/paths/~1services~1/{addonName}/get/responses/200/schema",
@@ -46,7 +46,8 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 ```json
 {
   "version": "2022-12-17-draft",
-  "origin": "https://example.com/commenting-tool",
+  "author": "https://example.com/commenting-tool",
+  "origin": "http://example.com/openapi-docs/1234",
   "remarks": [
     {
       "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
@@ -78,7 +79,8 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 #### JSON Remark Document
 
 - `version` - the version of the JSON Remark document.
-- `origin` - a URL specifying the origin of the remarks. This MUST act as an ID for the origin and a MAY act as a resolvable URL that defines documentation about the originating tool.
+- `author` - a URL to the tool, service, or person that generated the JSON Remark document
+- `origin` - a URL specifying the originating document of the remarks. This MUST act as an ID for the origin and a MAY act as a resolvable URL.
 - `more` - a URL linking to a place that provides additional data for the entire JSON Remark document
 - `remarks` (Array[Remark]) - an array of [Remark](#Remark) objects
 
