@@ -1,6 +1,6 @@
 # JSON Remark for Linting
 
-**WORK IN PROGRESS> THIS IS EXPERIMENTAL. WILL CREATE A BETTER PLACE FOR THESE LATER**
+**WORK IN PROGRESS. THIS IS EXPERIMENTAL. WILL CREATE A BETTER PLACE FOR THESE LATER**
 
 Type URL: `https://github.com/smizell/json-remark/blob/main/contrib/linting.md`
 
