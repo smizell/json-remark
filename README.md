@@ -2,7 +2,7 @@
 
 **Version**: `2022-12-17-draft`
 
-This is currently a draft and may change considerably.
+This is currently a draft and may change considerably. Please do not use yet.
 
 ## Overview
 
@@ -71,10 +71,10 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 
 #### Remark
 
+- `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This must act as an ID for the remark type and may act as a resolvable URL that defines documentation about the type itself.
 - `path` - a [JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901) to the item in the JSON document to which the remark pertains
+- `text` (optional) - human-readable text for the remark
 - `for` (optional) (enum: `key`, `value`, `all`) (default: `key`) - the specific part of the path to which the remark pertains. This may be the `key`, the `value` found at the path, or the full key-value.
-- `type` - a URL specifying the type of the remark, which provides a specification for what can be found in `data`. This MUST act as an ID for the remark type and a MAY act as a resolvable URL that defines documentation about the type itself.
-- `text` - human-readable text for the remark
 - `data` (object) - an object that contains remark data as defined by the `type`
 
 ## Contributed JSON Remark Types
