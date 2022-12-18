@@ -2,7 +2,7 @@
 
 **WORK IN PROGRESS> THIS IS EXPERIMENTAL. WILL CREATE A BETTER PLACE FOR THESE LATER**
 
-Type URL: `https://github.com/smizell/json-remark/main/contrib/linting.md`
+Type URL: `https://github.com/smizell/json-remark/blob/main/contrib/linting.md`
 
 This defines a JSON Remark Type to be used by JSON linters. A linter should define a URL for `origin` for the full JSON Remark document so consumers can follow the link to understand how the linter works.
 
