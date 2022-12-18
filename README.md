@@ -19,17 +19,18 @@ Here we see remarks from a made-up linting tool. The tool provides an `origin` U
 ```json
 {
   "version": "2022-12-17-draft",
-  "origin": "https://example.com/linting-tool",
-  "more": "https://example.com/linting-report/33442",
+  "origin": "https://stoplight.io/open-source/spectral",
   "remarks": [
     {
-      "type": "https://example.com/definition/linting",
-      "path": "#/components/schemas/Person/properties/firstName",
-      "text": "Property name MUST be snake case",
+      "path": "#/paths/~1services~1/{addonName}/get/responses/200/schema",
+      "for": "value",
+      "type": "https://github.com/smizell/json-remark/main/contrib/linting.md",
+      "text": "$ref cannot be placed next to any other properties",
       "data": {
         "level": "error",
-        "rule_name": "JSON property snake case",
-        "rule_docs": "https://example.com/rules/json-property-snake-case"
+        "rule_name": "org.spectral.no-$ref-siblings",
+        "line": "891",
+        "column": "19"
       }
     }
   ]
@@ -48,12 +49,24 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
   "origin": "https://example.com/commenting-tool",
   "remarks": [
     {
-      "type": "https://example.com/definition/comment",
+      "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
       "path": "#/paths/~1customers~1{id}/put",
       "text": "Should this be a PATCH instead of a PUT?",
       "data": {
-        "user_profile": "https://github.com/smizell",
+        "id": "https://example.com/comments/1234",
+        "user_profile": "https://example.com/profiles/smizell",
         "name": "Stephen Mizell"
+      }
+    },
+    {
+      "type": "https://github.com/smizell/json-remark/blob/main/contrib/commenting.md",
+      "path": "#/paths/~1customers~1{id}/put",
+      "text": "Let's leave it as PUT.",
+      "data": {
+        "id": "https://example.com/comments/5678",
+        "user_profile": "https://example.com/profiles/jdoe",
+        "name": "Jane Doe",
+        "replying_to": "https://example.com/comments/1234"
       }
     }
   ]
