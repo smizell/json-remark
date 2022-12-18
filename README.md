@@ -75,7 +75,7 @@ Note: the slashes in the URL path are converted to `~1` according to the [JSON P
 - `path` - a [JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901) to the item in the JSON document to which the remark pertains
 - `text` (optional) - human-readable text for the remark
 - `for` (optional) (enum: `key`, `value`, `all`) (default: `key`) - the specific part of the path to which the remark pertains. This may be the `key`, the `value` found at the path, or the full key-value.
-- `data` (object) - an object that contains remark data as defined by the `type`
+- `data` (object, optional) - an object that contains remark data as defined by the `type`
 
 ## Contributed JSON Remark Types
 
